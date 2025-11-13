@@ -243,3 +243,62 @@ dropdownLinks.forEach(link => {
     }
 });
 
+// Fetch Open Graph images for articles
+function fetchOGImage(url, imgElement) {
+    // Use a proxy service or direct fetch
+    // For now, we'll use the article URL structure to guess the image
+    // In production, you might want to use a backend service to fetch og:image
+    
+    // Try to extract domain and create a likely image path
+    try {
+        const urlObj = new URL(url);
+        const domain = urlObj.hostname;
+        const path = urlObj.pathname;
+        
+        // Common Open Graph image patterns
+        const ogImageUrls = [
+            `${urlObj.origin}${path}/og-image.jpg`,
+            `${urlObj.origin}${path}/featured-image.jpg`,
+            `${urlObj.origin}/wp-content/uploads/${path.split('/').pop()}.jpg`,
+            `https://${domain}/og-image.jpg`
+        ];
+        
+        // Try each potential image URL
+        let currentIndex = 0;
+        const tryNextImage = () => {
+            if (currentIndex < ogImageUrls.length) {
+                const testImg = new Image();
+                testImg.onload = () => {
+                    imgElement.src = ogImageUrls[currentIndex];
+                };
+                testImg.onerror = () => {
+                    currentIndex++;
+                    tryNextImage();
+                };
+                testImg.src = ogImageUrls[currentIndex];
+            }
+        };
+        tryNextImage();
+    } catch (e) {
+        console.log('Could not fetch OG image:', e);
+    }
+}
+
+// Initialize OG image fetching for article images
+document.addEventListener('DOMContentLoaded', function() {
+    const articleImages = document.querySelectorAll('.news-image img, .blog-image img');
+    articleImages.forEach(img => {
+        // Find the article link in the same card
+        const card = img.closest('.news-card, .blog-card');
+        if (card) {
+            const articleLink = card.querySelector('a[href^="http"]');
+            if (articleLink && articleLink.href) {
+                // Only fetch if image failed to load
+                img.addEventListener('error', function() {
+                    fetchOGImage(articleLink.href, img);
+                });
+            }
+        }
+    });
+});
+
