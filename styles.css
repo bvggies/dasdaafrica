@@ -606,13 +606,9 @@ section {
 }
 
 .threads-embed-wrapper iframe {
-    max-height: 400px;
-}
-
-.threads-embed-wrapper iframe {
     width: 100%;
     border-radius: 8px;
-    min-height: 600px;
+    max-height: 400px;
 }
 
 /* Responsive adjustments for social embeds */
