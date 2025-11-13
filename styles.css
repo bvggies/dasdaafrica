@@ -565,7 +565,7 @@ section {
 
 .social-embed-card {
     background: var(--bg-white);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -577,8 +577,8 @@ section {
 }
 
 .social-embed-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
     color: var(--text-dark);
     text-align: center;
 }
@@ -588,7 +588,9 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 400px;
+    min-height: 300px;
+    max-height: 400px;
+    overflow: hidden;
 }
 
 .social-embed .fb-post,
@@ -604,6 +606,10 @@ section {
 }
 
 .threads-embed-wrapper iframe {
+    max-height: 400px;
+}
+
+.threads-embed-wrapper iframe {
     width: 100%;
     border-radius: 8px;
     min-height: 600px;
@@ -616,11 +622,12 @@ section {
     }
     
     .social-embed {
-        min-height: 300px;
+        min-height: 250px;
+        max-height: 350px;
     }
     
     .threads-embed-wrapper iframe {
-        min-height: 500px;
+        max-height: 350px;
     }
     
     .team-grid {
