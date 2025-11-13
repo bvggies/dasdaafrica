@@ -4,6 +4,16 @@ window.addEventListener('load', function() {
     setTimeout(() => {
         preloader.classList.add('hidden');
     }, 500);
+    
+    // Initialize Facebook embeds
+    if (typeof FB !== 'undefined') {
+        FB.XFBML.parse();
+    }
+    
+    // Initialize Instagram embeds
+    if (window.instgrm) {
+        window.instgrm.Embeds.process();
+    }
 });
 
 // Mobile Menu Toggle
