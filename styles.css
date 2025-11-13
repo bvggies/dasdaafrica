@@ -6,9 +6,9 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #3b82f6;
+    --primary-color: #00695c;
+    --secondary-color: #00897b;
+    --accent-color: #26a69a;
     --text-dark: #1f2937;
     --text-light: #6b7280;
     --bg-light: #f9fafb;
@@ -52,7 +52,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00695c 0%, #26a69a 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -245,7 +245,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00695c 0%, #26a69a 100%);
     background-image: url('assets/hero-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -448,7 +448,7 @@ section {
 
 /* Impact Section */
 .impact {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00695c 0%, #26a69a 100%);
     color: white;
 }
 
@@ -495,7 +495,7 @@ section {
 
 .program-image {
     height: 200px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00695c 0%, #26a69a 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -655,7 +655,7 @@ section {
 
 /* CTA Section */
 .cta {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00695c 0%, #26a69a 100%);
     color: white;
     text-align: center;
 }
@@ -680,7 +680,7 @@ section {
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00695c 0%, #26a69a 100%);
     color: white;
     padding: 4rem 0;
     text-align: center;
@@ -729,7 +729,7 @@ section {
 .image-placeholder {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00695c 0%, #26a69a 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -813,7 +813,7 @@ section {
 
 /* Tagline Section */
 .tagline-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00695c 0%, #26a69a 100%);
     color: white;
     padding: 4rem 0;
     text-align: center;
@@ -934,7 +934,7 @@ section {
 
 .blog-image {
     height: 200px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00695c 0%, #26a69a 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1027,7 +1027,7 @@ section {
 
 .news-image {
     height: 200px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00695c 0%, #26a69a 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1231,7 +1231,7 @@ section {
 .gallery-image {
     position: relative;
     height: 300px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00695c 0%, #26a69a 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1637,7 +1637,7 @@ section {
 .member-image {
     width: 100%;
     height: 300px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00695c 0%, #26a69a 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2022,7 +2022,7 @@ section {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--primary-color) 0%, #764ba2 100%);
+    background: linear-gradient(90deg, var(--primary-color) 0%, #26a69a 100%);
     border-radius: 10px;
     transition: width 0.3s ease;
 }
@@ -2062,7 +2062,7 @@ section {
 .stat-number {
     font-size: 3.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #26a69a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
