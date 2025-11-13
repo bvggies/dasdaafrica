@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support DaSDA Africa's mission - Make a donation to help empower individuals with disabilities and create a more inclusive Africa.">
+    <title>Donate - DaSDA Africa</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Pre-loader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <img src="assets/favicon.png" alt="DaSDA Africa" class="preloader-icon">
+            <div class="preloader-text">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="assets/dasda logo.png" alt="DaSDA Africa Logo">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about.html">About Us <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="blogs.html">Blogs</a></li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="donate.html" class="donate-btn active">Donate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Support Our Mission</h1>
+            <p>Your donation helps us create a more inclusive and equitable Africa</p>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section class="donate-section">
+        <div class="container">
+            <div class="donate-wrapper">
+                <div class="donate-info">
+                    <h2>Why Donate?</h2>
+                    <p>Your generous contribution enables us to continue our vital work in advocating for disability rights, providing essential support, and building inclusive communities across Africa.</p>
+                    
+                    <div class="impact-list">
+                        <div class="impact-item-small">
+                            <div class="impact-icon-small">🎁</div>
+                            <div>
+                                <h3>Provide Essential Items</h3>
+                                <p>Support vulnerable populations with charity and essential items</p>
+                            </div>
+                        </div>
+                        <div class="impact-item-small">
+                            <div class="impact-icon-small">💼</div>
+                            <div>
+                                <h3>Empower Entrepreneurs</h3>
+                                <p>Offer startup capital to entrepreneurs with disabilities</p>
+                            </div>
+                        </div>
+                        <div class="impact-item-small">
+                            <div class="impact-icon-small">🏗️</div>
+                            <div>
+                                <h3>Build Infrastructure</h3>
+                                <p>Construct accessible community facilities</p>
+                            </div>
+                        </div>
+                        <div class="impact-item-small">
+                            <div class="impact-icon-small">📢</div>
+                            <div>
+                                <h3>Advocate for Change</h3>
+                                <p>Drive policy changes that benefit individuals with disabilities</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="donation-note">
+                        <h3>Your Impact</h3>
+                        <p>Every donation, no matter the size, makes a real difference. 100% of your contribution goes directly to supporting our programs and initiatives.</p>
+                    </div>
+                </div>
+
+                <div class="donate-form-wrapper">
+                    <div class="donate-form-card">
+                        <h2>Make a Donation</h2>
+                        <form class="donate-form" id="donateForm">
+                            <div class="form-group">
+                                <label for="donation-amount">Donation Amount (GHS) *</label>
+                                <div class="amount-options">
+                                    <button type="button" class="amount-btn" data-amount="50">50</button>
+                                    <button type="button" class="amount-btn" data-amount="100">100</button>
+                                    <button type="button" class="amount-btn" data-amount="200">200</button>
+                                    <button type="button" class="amount-btn" data-amount="500">500</button>
+                                    <button type="button" class="amount-btn" data-amount="1000">1000</button>
+                                </div>
+                                <input type="number" id="donation-amount" name="amount" placeholder="Enter custom amount" min="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="donation-type">Donation Type</label>
+                                <select id="donation-type" name="type">
+                                    <option value="one-time">One-time Donation</option>
+                                    <option value="monthly">Monthly Recurring</option>
+                                    <option value="yearly">Yearly Recurring</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="donor-name">Full Name *</label>
+                                <input type="text" id="donor-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="donor-email">Email Address *</label>
+                                <input type="email" id="donor-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="donor-phone">Phone Number</label>
+                                <input type="tel" id="donor-phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="payment-method">Payment Method *</label>
+                                <select id="payment-method" name="payment" required>
+                                    <option value="">Select payment method</option>
+                                    <option value="mobile-money">Mobile Money</option>
+                                    <option value="bank-transfer">Bank Transfer</option>
+                                    <option value="card">Credit/Debit Card</option>
+                                </select>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="anonymous" id="anonymous">
+                                    <span>Donate anonymously</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-large btn-block">Proceed to Payment</button>
+                            <div id="donateMessage" class="form-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Ways to Support -->
+    <section class="support-section bg-light">
+        <div class="container">
+            <h2 class="text-center">Other Ways to Support</h2>
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="support-icon">🤝</div>
+                    <h3>Volunteer</h3>
+                    <p>Donate your time and skills to support our programs and initiatives.</p>
+                    <a href="contact.html" class="btn btn-outline">Learn More</a>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">🏢</div>
+                    <h3>Corporate Partnership</h3>
+                    <p>Partner with us to create lasting impact in communities across Africa.</p>
+                    <a href="contact.html" class="btn btn-outline">Partner With Us</a>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">📦</div>
+                    <h3>In-Kind Donations</h3>
+                    <p>Donate essential items, equipment, or services that support our work.</p>
+                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="assets/dasda logo.png" alt="DaSDA Africa Logo" class="footer-logo">
+                    <p>Championing Change, Building Inclusion</p>
+                    <p class="footer-tagline">Empowering individuals with disabilities through advocacy, inclusion, and social development.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Email: info@dasdaafrica.org</li>
+                        <li>Phone: +233 XX XXX XXXX</li>
+                        <li>Ghana, West Africa</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DaSDA Africa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
