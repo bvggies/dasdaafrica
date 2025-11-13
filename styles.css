@@ -613,6 +613,21 @@ section {
     .threads-embed-wrapper iframe {
         min-height: 500px;
     }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .member-image {
+        height: 250px;
+    }
+    
+    .member-placeholder {
+        width: 120px;
+        height: 120px;
+        font-size: 3rem;
+    }
 }
 
 /* CTA Section */
