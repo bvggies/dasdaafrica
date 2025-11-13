@@ -245,7 +245,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: url('assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
     text-align: center;
     overflow: hidden;
@@ -257,7 +261,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 
@@ -1472,6 +1476,10 @@ section {
         box-shadow: none;
         margin-top: 0.5rem;
         margin-left: 1rem;
+    }
+
+    .hero {
+        background-attachment: scroll;
     }
 
     .hero-title {
