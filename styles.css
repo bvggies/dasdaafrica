@@ -63,6 +63,7 @@ body {
 .preloader.hidden {
     opacity: 0;
     visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .preloader-content {

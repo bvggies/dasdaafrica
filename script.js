@@ -1,10 +1,16 @@
-// Pre-loader
-window.addEventListener('load', function() {
+// Pre-loader - Hide faster
+document.addEventListener('DOMContentLoaded', function() {
     const preloader = document.getElementById('preloader');
-    setTimeout(() => {
-        preloader.classList.add('hidden');
-    }, 500);
-    
+    if (preloader) {
+        // Hide preloader quickly after DOM is ready
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+        }, 100);
+    }
+});
+
+// Initialize embeds after page fully loads
+window.addEventListener('load', function() {
     // Initialize Facebook embeds
     if (typeof FB !== 'undefined') {
         FB.XFBML.parse();
