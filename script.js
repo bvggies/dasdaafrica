@@ -9,6 +9,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Copy to Clipboard Function
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        // Show success feedback
+        const button = event.target.closest('.copy-btn');
+        if (button) {
+            const originalHTML = button.innerHTML;
+            button.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>';
+            button.style.background = '#25D366';
+            setTimeout(() => {
+                button.innerHTML = originalHTML;
+                button.style.background = '';
+            }, 2000);
+        }
+    }).catch(function(err) {
+        console.error('Failed to copy text: ', err);
+        alert('Failed to copy. Please copy manually: ' + text);
+    });
+}
+
 // Initialize embeds after page fully loads
 window.addEventListener('load', function() {
     // Initialize Facebook embeds
