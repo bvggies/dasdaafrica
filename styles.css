@@ -613,6 +613,11 @@ section {
     color: white;
 }
 
+.impact .section-subtitle {
+    color: #ffd700;
+    font-weight: 500;
+}
+
 .impact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
