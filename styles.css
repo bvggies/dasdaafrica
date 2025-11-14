@@ -243,19 +243,59 @@ body {
 }
 
 .donate-btn {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
     color: white !important;
-    padding: 0.5rem 1.5rem;
-    border-radius: 25px;
-    transition: background 0.3s ease;
+    padding: 0.65rem 1.75rem;
+    border-radius: 30px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 105, 92, 0.3);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.donate-btn::before {
+    content: '💝';
+    font-size: 1rem;
+    margin-right: 0.25rem;
+}
+
+.donate-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
 }
 
 .donate-btn:hover {
-    background: var(--secondary-color);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 105, 92, 0.4);
+}
+
+.donate-btn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.donate-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 105, 92, 0.3);
 }
 
 .donate-btn.active {
-    background: var(--secondary-color);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    box-shadow: 0 4px 12px rgba(0, 105, 92, 0.3);
 }
 
 /* Dropdown Menu */
@@ -709,6 +749,15 @@ section {
     .program-card:hover,
     .news-card:hover {
         transform: translateY(-5px) scale(1);
+    }
+    
+    .donate-btn {
+        padding: 0.55rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .donate-btn::before {
+        font-size: 0.9rem;
     }
 }
 
