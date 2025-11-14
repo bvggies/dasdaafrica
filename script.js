@@ -238,6 +238,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scrollToTop');
+if (scrollToTopBtn) {
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+    
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Reading Progress Bar
+const readingProgress = document.getElementById('readingProgress');
+if (readingProgress) {
+    window.addEventListener('scroll', function() {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (window.pageYOffset / windowHeight) * 100;
+        readingProgress.style.width = scrolled + '%';
+    });
+}
+
 // Navbar Scroll Effect
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
@@ -247,8 +276,12 @@ window.addEventListener('scroll', function() {
     
     if (currentScroll > 100) {
         navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+        navbar.style.backdropFilter = 'blur(10px)';
+        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
     } else {
         navbar.style.boxShadow = 'none';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.backgroundColor = '';
     }
     
     lastScroll = currentScroll;
