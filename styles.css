@@ -551,6 +551,38 @@ section {
     transform: translateY(-3px);
 }
 
+/* Song Section */
+.song-section {
+    padding: 5rem 0;
+}
+
+.song-embed-wrapper {
+    max-width: 600px;
+    margin: 3rem auto 0;
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.song-embed-wrapper iframe {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .song-embed-wrapper {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .song-embed-wrapper iframe {
+        height: 252px;
+    }
+}
+
 /* Socials Section */
 .socials-section {
     padding: 5rem 0;
